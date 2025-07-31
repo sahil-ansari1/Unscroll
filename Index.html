@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Unscroll - Your Productivity Partner</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #f4f4f4; padding: 40px; }
+        .container { max-width: 600px; margin: auto; background: white; padding: 30px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        input[type="text"] { width: 80%; padding: 10px; }
+        input[type="submit"] { padding: 10px 20px; }
+        .response { margin-top: 20px; color: green; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Unscroll ✨</h2>
+        <p>Ask me anything about focus, time or motivation.</p>
+        <form method="POST">
+            <input type="text" name="query" placeholder="What's on your mind?" required>
+            <input type="submit" value="Ask">
+        </form>
+        {% if response %}
+        <div class="response">
+            {{ response }}
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
